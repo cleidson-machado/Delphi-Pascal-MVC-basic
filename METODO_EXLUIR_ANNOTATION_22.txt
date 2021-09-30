@@ -1,0 +1,28 @@
+procedure TfrmClienteCrud.btnExcluirClick(Sender: TObject);
+//######################################################-> CRUD - BTN EXCLUIR / DELETAR
+begin
+      edtCodigo.Text := dmAppSystemCenter.mmTableClientesBaseList.Fields[0].AsString;
+      edtNome.Text   := dmAppSystemCenter.mmTableClientesBaseList.Fields[1].AsString;
+        if (MSNCenter.ConfirmDelete) then
+        else
+            begin
+                 FControllerCliente.ClienteModel.Acao   := uEnumGenericAcoes.tactionExcluir;
+                 FControllerCliente.ClienteModel.Codigo := StrToInt(edtCodigo.Text);
+                   if not FControllerCliente.Salvar() then
+                       begin
+                          Exit
+                       end
+                     else
+                       begin
+                        Self.StartClientesDbGrid;//ALIMENTA A GRID...
+                          ActionBtn:= ExcluiAct;
+                            Self.ReorderEditBtnThisView;
+                       end;
+            end;
+
+        //### REORDENA A VIEW!!
+          //ActionBtn:= ExcluiAct;
+            //Self.ReorderEditBtnThisView;
+              {dbgCliente.SetFocus;
+              Self.OnOffTheButtons(True, False, True, True, False);}
+end;

@@ -1,0 +1,9 @@
+*******************************************************************
+DATA_HORA: 10-02-2020 | 20:00:09
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]I/O error during "CreateFile (open)" operation for file "C:\Z_DBASE_STORAGE\FBIRD\DB_MVC.FDBSS"
+Error while trying to open file
+O sistema não pode encontrar o arquivo especificado. 

@@ -1,0 +1,25 @@
+program ProjectMVCByMySelf;
+
+uses
+  Vcl.Forms,
+  FPrincipalView in 'br.com.salesforce.View\FPrincipalView.pas' {frmPrincipal},
+  uClienteView in 'br.com.salesforce.View\uClienteView.pas' {frmCliente},
+  uEmpresaView in 'br.com.salesforce.View\uEmpresaView.pas' {frmEmpresa},
+  uClienteModel in 'br.com.salesforce.Model\uClienteModel.pas',
+  uClienteDao in 'br.com.salesforce.Dao\uClienteDao.pas',
+  uConexao in 'br.com.salesforce.Dao.Conex\uConexao.pas',
+  uClienteControl in 'br.com.salesforce.Controller\uClienteControl.pas',
+  uSistemaControl in 'br.com.salesforce.Controller.CenterApp\uSistemaControl.pas',
+  uClienteViewCrud in 'br.com.salesforce.View\uClienteViewCrud.pas' {frmClienteCrud},
+  uAppSystemCenterDM in 'br.com.salesforce.App.Component.DM\uAppSystemCenterDM.pas' {dmAppSystemCenter: TDataModule},
+  uEnumGenericAcoes in 'br.com.salesforce.Model.Util\uEnumGenericAcoes.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdmAppSystemCenter, dmAppSystemCenter);
+  Application.Run;
+end.

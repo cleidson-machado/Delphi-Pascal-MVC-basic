@@ -1,0 +1,18 @@
+unit uEnumGenericAcoes;
+    //EXPLICAR AQUI A REAL UTILIDADE DESSA CLASSE / UNIT
+    //AQUI TRABALHA CENTRALIZANDO OPÇÕES PARA MÉTODOS QUE UTIZAM ALGUMA FORMA DE CASE OF..
+    //COMO SE FOSSE UMA ESPÉCIE DE HUB...
+
+interface
+
+type
+
+  //VEIO DO PROJETO ORIGINAL...
+  TActionRotulo = (tactionIndefinido, tactionIncluir, tactionAlterar, tactionExcluir);
+
+  //UTILIZADOS ESPECIFICAMENTE PARA O MÉTODO QUE REORDENA CARACTERISTICAS DE BTNS E EDITS NAS VIEWS..
+  TBtnActions   = (NovoAct, SalvaAct, AlteraAct, ExcluiAct, CancelaAct);
+
+implementation
+
+end.

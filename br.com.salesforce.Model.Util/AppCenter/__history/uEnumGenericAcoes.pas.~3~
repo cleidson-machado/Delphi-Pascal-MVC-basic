@@ -1,0 +1,16 @@
+unit uEnumGenericAcoes;
+    //EXPLICAR AQUI A REAL UTILIDADE DESSA CLASSE / UNIT
+
+interface
+
+type
+  TActionRotulo = (tactionIndefinido, tactionIncluir, tactionAlterar, tactionExcluir);
+
+  TActonTeste   = (ActionA, ActionB, ActionC);
+
+  //UTILIZADOS ESPECIFICAMENTE PARA O MÉTODO QUE REORDENA CARACTERISTICAS DE BTNS E EDITS NAS VIEWS..
+  TBtnActions   = (NovoAct, SalvaAct, AlteraAct, ExcluiAct);
+
+implementation
+
+end.

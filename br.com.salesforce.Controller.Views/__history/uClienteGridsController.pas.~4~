@@ -1,0 +1,32 @@
+unit uClienteGridsController;
+
+interface
+
+uses
+  FireDAC.Comp.Client;
+
+type
+
+  IClienteGridsController = interface
+  ['{4F98D2C5-3FF2-4D6F-9A00-B296BABCB7A4}']
+
+    procedure ClienteGridObter;
+
+  end;
+
+  TClienteGridsController = class(TInterfacedObject,IClienteGridsController)
+
+    procedure ClienteGridObter;
+
+  end;
+
+implementation
+
+{ TClienteGrids }
+
+procedure TClienteGridsController.ClienteGridObter;
+begin
+  //IMPLEMENTAR
+end;
+
+end.

@@ -1,0 +1,123 @@
+unit uClienteModel;
+
+interface
+
+uses
+  System.SysUtils,
+  FireDAC.Comp.Client,
+  uEnumGenericAcoes;
+
+type
+  TClienteModel = class(TObject)
+  private
+    FAcao: TActionRotulo;
+
+    FCodigo: Integer; //ATRIBUTO DA CLASSE
+    FNome: string;    //ATRIBUTO DA CLASSE
+
+    function GetAcao: TActionRotulo;                //GET EXPLÍCITO..
+    procedure SetAcao(const Value: TActionRotulo);  //SET EXPLÍCITO..
+
+    procedure SetCodigo(const Value: Integer);
+    procedure SetNome(const Value: string);
+
+  public
+    function Obter: TFDQuery;
+    function Salvar: Boolean;
+    function GetId(ACodigo: Integer): Integer;
+
+    procedure Carregar(ACodigo: Integer);
+
+    property Codigo: Integer read FCodigo write SetCodigo;
+    property Nome: string read FNome write SetNome;
+
+    //ALTERADO PARA PADRÃO GET AND SET EXPLICITO!
+    property Acao: TActionRotulo read GetAcao write SetAcao;
+  end;
+
+implementation
+
+{ TCliente }
+
+uses uClienteDao;
+
+procedure TClienteModel.Carregar(ACodigo: Integer);
+//AQUI VEIO DA CLASSE EMPRESA NO PROJETO ORIGINAL..
+var
+  VClienteDao: TClienteDao;
+begin
+   VClienteDao := TClienteDao.Create;
+   try
+      VClienteDao.carregar(Self, ACodigo);
+   finally
+      VClienteDao.Free;
+   end;
+end;
+
+
+function TClienteModel.GetId(ACodigo: Integer): Integer;
+//AQUI A VARIÁVEL ACodigo VAI USAR O GENERATOR NO BANCO DE DADOS PARA AUTOINCREMENTAR A PK..
+//OBS TODA VEZ QUE A VIEW ENVIA O COMANDO DE NOVO UMA PK É DIPONIBILIZADA APENAS PRA ELA..
+//SE OUTRA INSTÂNCA DA MESMA VIEW FIZER O COMANDO NOVO OUTRA VEZ VAI GANHAR OUTRA ID DO BANCO.
+var
+  VClienteDao: TClienteDao;
+begin
+  VClienteDao := TClienteDao.Create;
+  try
+    Result := VClienteDao.GetId(ACodigo);
+  finally
+    VClienteDao.Free;
+  end;
+end;
+
+function TClienteModel.Obter: TFDQuery;
+var
+  VClienteDao: TClienteDao;
+begin
+  VClienteDao := TClienteDao.Create;
+  try
+    Result := VClienteDao.Obter;
+  finally
+    VClienteDao.Free;
+  end;
+end;
+
+function TClienteModel.Salvar: Boolean;
+var
+  VClienteDao: TClienteDao;
+begin
+  Result := False;
+
+  VClienteDao := TClienteDao.Create;
+  try
+    case GetAcao of
+      uEnumGenericAcoes.tactionIncluir: Result := VClienteDao.Incluir(Self);
+      uEnumGenericAcoes.tactionAlterar: Result := VClienteDao.Alterar(Self);
+      uEnumGenericAcoes.tactionExcluir: Result := VClienteDao.Excluir(Self);
+    end;
+  finally
+    VClienteDao.Free;
+  end;
+end;
+
+procedure TClienteModel.SetAcao(const Value: TActionRotulo);
+begin
+  FAcao := Value;
+end;
+
+function TClienteModel.GetAcao: TActionRotulo;
+begin
+  Result:= FAcao;
+end;
+
+procedure TClienteModel.SetCodigo(const Value: Integer);
+begin
+  FCodigo := Value;
+end;
+
+procedure TClienteModel.SetNome(const Value: string);
+begin
+  FNome := Value;
+end;
+
+end.

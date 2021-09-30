@@ -1,0 +1,11 @@
+unit uEnumGenericAcoes;
+    //EXPLICAR AQUI A REAL UTILIDADE DESSA CLASSE / UNIT
+
+interface
+
+type
+  TActionRotulo = (tactionIndefinido, tactionIncluir, tactionAlterar, tactionExcluir);
+
+implementation
+
+end.

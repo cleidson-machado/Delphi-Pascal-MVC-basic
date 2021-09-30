@@ -1,0 +1,27 @@
+unit uViewController.ClienteCrud;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+  TViewControllerClienteCrud = class
+
+  private
+
+  public
+    procedure  msnOnSucess;
+
+  end;
+
+implementation
+
+{ TViewControllerClienteCrud }
+
+procedure TViewControllerClienteCrud.msnOnSucess;
+begin
+    ShowMessage('PASSE POR AQUI');
+end;
+
+end.

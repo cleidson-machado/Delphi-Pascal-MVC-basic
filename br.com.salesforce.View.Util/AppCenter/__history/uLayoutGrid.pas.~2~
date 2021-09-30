@@ -1,0 +1,25 @@
+unit uLayoutGrid;
+
+interface
+
+uses
+  Winapi.Windows, Vcl.DBGrids, Vcl.Grids, System.UITypes, Vcl.Graphics;
+
+type
+  TLayoutGrid = class
+
+    class procedure ZebrarGrid(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState; Color: TColor);
+  end;
+
+implementation
+
+{ TLayoutGrid }
+
+class procedure TLayoutGrid.ZebrarGrid(Sender: TObject; const Rect: TRect;
+  DataCol: Integer; Column: TColumn; State: TGridDrawState; Color: TColor);
+begin
+    //IMPLEMENTAR...
+end;
+
+end.

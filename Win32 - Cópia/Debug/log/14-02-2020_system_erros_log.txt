@@ -1,0 +1,57 @@
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:16:56
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]I/O error during "CreateFile (open)" operation for file "C:\Z_DBASE_STORAGE\FBIRD\DB_MVC.FDB;HOST:=127.0.0.1"
+Error while trying to open file
+O sistema não pode encontrar o arquivo especificado. 
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:17:16
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]I/O error during "CreateFile (open)" operation for file "C:\Z_DBASE_STORAGE\FBIRD\DB_MVC.FDB;"
+Error while trying to open file
+O sistema não pode encontrar o arquivo especificado. 
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:27:28
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 97
+CLASS_NAME: EConvertError
+CLASS_NAME_FULL: System.SysUtils.EConvertError
+ERROR_MSN: 'A' is not a valid integer value
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:52:21
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Unable to complete network request to host "XXX".
+Failed to locate host machine.
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:54:32
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Unable to complete network request to host "10.200.10.1".
+Failed to establish a connection.
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:55:01
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Unable to complete network request to host "10.200.10.1".
+Failed to establish a connection.
+*******************************************************************
+DATA_HORA: 14-02-2020 | 08:56:51
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Unable to complete network request to host "1DDDDD".
+Failed to locate host machine.

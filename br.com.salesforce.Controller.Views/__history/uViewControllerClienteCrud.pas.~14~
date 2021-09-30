@@ -1,0 +1,42 @@
+unit uViewControllerClienteCrud;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+
+
+  IViewClienteCrud = interface
+  ['{5B1E64D1-AEF2-4A69-AAD1-8DB29CCC71CE}']
+
+    procedure  msnOnSucess;
+    procedure OnOffTheEdits(AEditOk: Boolean);
+
+  end;
+
+
+  TViewControllerClienteCrud = class (TInterfacedObject, IViewClienteCrud)
+
+  private
+    procedure  msnOnSucess;
+
+  public
+    //NÃO PRECISA DEIXA AQUI!!?
+
+  end;
+
+implementation
+
+uses
+  uClienteViewCrud;
+
+{ TViewControllerClienteCrud }
+
+procedure TViewControllerClienteCrud.msnOnSucess;
+begin
+    ShowMessage('SALVO COM SUCESSO!');
+end;
+
+end.

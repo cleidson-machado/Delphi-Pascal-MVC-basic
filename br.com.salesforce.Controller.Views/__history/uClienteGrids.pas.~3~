@@ -1,0 +1,27 @@
+unit uClienteGrids;
+
+interface
+
+type
+
+  IClienteGrids = interface
+  ['{4F98D2C5-3FF2-4D6F-9A00-B296BABCB7A4}']
+
+  end;
+
+  TClienteGrids = class
+
+    procedure ClienteGridObter;
+
+  end;
+
+implementation
+
+{ TClienteGrids }
+
+procedure TClienteGrids.ClienteGridObter;
+begin
+//sdfsd
+end;
+
+end.

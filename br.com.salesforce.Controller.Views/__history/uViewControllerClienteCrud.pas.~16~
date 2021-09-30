@@ -1,0 +1,41 @@
+unit uViewControllerClienteCrud;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+
+
+  IViewClienteCrud = interface
+  ['{5B1E64D1-AEF2-4A69-AAD1-8DB29CCC71CE}']
+
+    procedure  OnSucess;
+
+  end;
+
+
+  TViewControllerClienteCrud = class (TInterfacedObject, IViewClienteCrud)
+
+  private
+    procedure  OnSucess;
+
+  public
+    //NÃO PRECISA DEIXA AQUI!!?
+
+  end;
+
+implementation
+
+uses
+  uClienteViewCrud;
+
+{ TViewControllerClienteCrud }
+
+procedure TViewControllerClienteCrud.OnSucess;
+begin
+    ShowMessage('SALVO COM SUCESSO!');
+end;
+
+end.

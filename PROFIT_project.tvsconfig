@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.PROFIT" Type="System.String" Value="PROFIT" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.uClienteModel" Type="System.String" Value="uClienteModel" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.uClienteView" Type="System.String" Value="uClienteView" Category="General" IsBrowsable="False" />
+</TgConfig>

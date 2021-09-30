@@ -1,0 +1,6 @@
+*******************************************************************
+DATA_HORA: 03-02-2020 | 23:20:24
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 92
+CLASSE_NAME: EConvertError
+ERROR_MSN: 'A' is not a valid integer value

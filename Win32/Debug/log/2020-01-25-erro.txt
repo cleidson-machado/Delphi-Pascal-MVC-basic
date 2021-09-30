@@ -1,0 +1,14 @@
+--------------------------------------------------
+Data: 25/01/2020
+Hora: 12:56:31
+Erro: 'A' is not a valid integer value
+Classe: EConvertError
+Linha: 76
+Arquivo: FPrincipalView.pas
+--------------------------------------------------
+Data: 25/01/2020
+Hora: 12:56:33
+Erro: 'A' is not a valid integer value
+Classe: EConvertError
+Linha: 76
+Arquivo: FPrincipalView.pas

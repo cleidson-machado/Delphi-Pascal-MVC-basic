@@ -1,0 +1,29 @@
+procedure TfrmClienteCrud.btnExcluirClick(Sender: TObject);
+//######################################################-> CRUD - BTN EXCLUIR / DELETAR
+begin
+    // COMO SIMPLIFICAR ESSE???
+    edtCodigo.Text := mmTableClientes.Fields[0].AsString;
+    edtNome.Text   := mmTableClientes.Fields[1].AsString;
+
+    if (Application.MessageBox(PChar('CONFIRMA EXCLUIR?'
+    + ' '
+    + 'NOME:'
+    + ' '
+    + edtNome.Text
+    + ' '
+    + '/ IDPK:'
+    + ' '
+    + edtCodigo.Text ), 'CONFIRMAÇÃO', MB_YESNO + MB_DEFBUTTON2 + MB_ICONQUESTION) = mrYes) then
+        begin
+             FControleCliente.ClienteModel.Acao   := uEnumGenericAcoes.tactionExcluir;
+             FControleCliente.ClienteModel.Codigo := StrToInt(edtCodigo.Text);
+
+             if FControleCliente.Salvar() then
+                ShowMessage('Excluido com sucesso.');
+                Self.StartClientesDbGrid;//ALIMENTA A GRID...
+        end;
+
+          //### REORDENA A VIEW!!
+          dbgCliente.SetFocus;
+          Self.OnOffTheButtons(True, False, True, True, False);
+end;

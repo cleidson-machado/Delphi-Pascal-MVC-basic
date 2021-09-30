@@ -1,0 +1,66 @@
+unit uMsnViewController;
+
+interface
+
+uses
+  Vcl.Dialogs, Vcl.Forms, Vcl.Controls, Winapi.Windows;
+
+type
+
+  //INTERFACE DESSA UNIT...
+  IMsnViewController = interface
+  ['{C24475F5-344C-488E-954E-0695FFFE063A}']
+
+    procedure  SaveSucess;
+    procedure  DeletedSucess;
+    procedure  UpdatedSucess;
+
+    procedure  ConfirmDelete;//DEVERIA SER DO TIPO.. FUNCTION ESSE MÉTODO..
+
+  end;
+
+  //CLASSE DESSA UNIT...
+  TMsnViewController = class (TInterfacedObject, IMsnViewController)
+
+  private
+    procedure  SaveSucess;
+    procedure  DeletedSucess;
+    procedure  UpdatedSucess;
+
+    procedure  ConfirmDelete;//DEVERIA SER DO TIPO.. FUNCTION ESSE MÉTODO..
+
+  public
+    //NÃO CRIAR MÉTODOS AQUI...
+
+  end;
+
+implementation
+
+{ TMsnViewController }
+
+procedure TMsnViewController.ConfirmDelete;
+begin
+    //IMPLEMENTAR
+    if (Application.MessageBox(PChar('CONFIRMA EXCLUIR?'),'CONFIRMAÇÃO', MB_YESNO + MB_DEFBUTTON2 + MB_ICONQUESTION) = mrYes) then
+      begin
+
+      end;
+
+end;
+
+procedure TMsnViewController.UpdatedSucess;
+begin
+    ShowMessage('ATUALIZADO COM SUCESSO!');
+end;
+
+procedure TMsnViewController.DeletedSucess;
+begin
+    ShowMessage('EXCLUIDO COM SUCESSO!');
+end;
+
+procedure TMsnViewController.SaveSucess;
+begin
+    ShowMessage('SALVO COM SUCESSO!');
+end;
+
+end.

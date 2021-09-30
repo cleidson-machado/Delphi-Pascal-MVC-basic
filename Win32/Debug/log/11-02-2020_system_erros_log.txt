@@ -1,0 +1,31 @@
+*******************************************************************
+DATA_HORA: 11-02-2020 | 06:40:18
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 197
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]I/O error during "CreateFile (open)" operation for file "C:\Z_DBASE_STORAGE\FBIRD\DB_MVC.FDBKKKK"
+Error while trying to open file
+O sistema não pode encontrar o arquivo especificado. 
+*******************************************************************
+DATA_HORA: 11-02-2020 | 06:40:38
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 105
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTEZ
+At line 1, column 22
+*******************************************************************
+DATA_HORA: 11-02-2020 | 06:47:44
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 105
+CLASS_NAME: EIBNativeException
+CLASS_NAME_FULL: FireDAC.Phys.IBWrapper.EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTEZ
+At line 1, column 22

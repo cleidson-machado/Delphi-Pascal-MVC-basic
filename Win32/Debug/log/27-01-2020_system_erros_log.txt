@@ -1,0 +1,60 @@
+*******************************************************************
+DATA_HORA: 27-01-2020 -- 21:31:40
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 153
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+*******************************************************************
+DATA_HORA: 27-01-2020 -- 21:31:44
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 153
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+*******************************************************************
+DATA_HORA: 27-01-2020 -- 21:31:45
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 153
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+*******************************************************************
+DATA_HORA: 27-01-2020 | 21:38:06
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 153
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+*******************************************************************
+DATA_HORA: 27-01-2020 | 21:42:46
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 156
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+*******************************************************************
+DATA_HORA: 27-01-2020 | 21:42:48
+ARQUIVO.PASS: uClienteDao.pas
+ARQUIVO.PASS_LINE: 156
+CLASSE_NAME: EIBNativeException
+ERROR_MSN: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13

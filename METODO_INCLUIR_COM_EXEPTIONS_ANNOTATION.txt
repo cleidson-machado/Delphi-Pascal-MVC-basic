@@ -1,0 +1,37 @@
+try
+    //TESTAR PARA SABER SE DÁ PARA INSERIR SEM PASSAER O CÓDIGO!
+    //OK.. TESTADO DÁ PARA INSERIR SEM PASSAR O CÓDIGO...
+    //VQuery.ExecSQL('insert into cliente (codigo, nome) values (:codigo, :nome)', [AClienteModel.Codigo, AClienteModel.Nome]);
+    VQuery.ExecSQL('insert into cliente (nome) values (:nome)', [AClienteModel.Nome]);
+
+    Result := True;
+  finally
+    VQuery.Free;
+  end;
+  
+  
+#############
+
+function TClienteDao.Incluir(AClienteModel: TClienteModel): Boolean;
+var
+  VQuery: TFDQuery;
+begin
+  VQuery := FConexao.CriarQuery();
+    try
+      try
+          VQuery.ExecSQL('insert into clientes (nome) values (:nome)', [AClienteModel.Nome]);
+          Result := True;
+      except
+        on E: Exception do
+          begin
+              VQuery.Transaction.Rollback;// SE OUVER ERRO..
+                  
+                  raise Exception.Create('ERRO AO INSERIR DADOS');
+
+                  ShowMessage('ATENÇÃO:' + E.Message);
+          end;
+      end;
+    finally
+      VQuery.Free;
+    end;
+end;

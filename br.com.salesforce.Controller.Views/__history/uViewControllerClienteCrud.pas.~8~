@@ -1,0 +1,54 @@
+unit uViewControllerClienteCrud;
+
+interface
+
+uses
+  Vcl.Dialogs;
+
+type
+
+
+  IViewClienteCrud = interface
+  ['{5B1E64D1-AEF2-4A69-AAD1-8DB29CCC71CE}']
+
+    procedure  msnOnSucess;
+    procedure OnOffTheEdits(AEditOk: Boolean);
+
+  end;
+
+
+  TViewControllerClienteCrud = class (TInterfacedObject, IViewClienteCrud)
+
+  private
+    procedure  msnOnSucess;
+    procedure OnOffTheEdits(AEditOk: Boolean);
+
+  public
+    //NÃO PRECISA DEIXA AQUI!!?
+
+  end;
+
+implementation
+
+{ TViewControllerClienteCrud }
+
+procedure TViewControllerClienteCrud.msnOnSucess;
+begin
+    ShowMessage('SALVO COM SUCESSO!');
+end;
+
+procedure TViewControllerClienteCrud.OnOffTheEdits(AEditOk: Boolean);
+begin
+    if AEditOk then
+    begin
+      // edtCodigo.ReadOnly := True; //PADRÃO PARA USO EM OUTROS EDITS
+      edtNome.ReadOnly   := True;
+    end
+  else
+    begin
+      // edtCodigo.ReadOnly := False; //PADRÃO PARA USO EM OUTROS EDITS
+      edtNome.ReadOnly   := False;
+    end;
+end;
+
+end.

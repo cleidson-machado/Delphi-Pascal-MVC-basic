@@ -1,0 +1,82 @@
+unit uAppSystemCenterEX;
+
+interface
+uses
+  //Forms, System.SysUtils, System.Classes;
+  Vcl.Forms;
+
+type
+  TAppSystemCenterEx = class
+
+    private
+      FLogFile: string;
+
+    public
+      constructor Create;
+      procedure TrataException(Sender: TObject; E: Exception);
+      procedure GravaLog(Value : string);
+
+  end;
+
+implementation
+
+{ TAppSystemCenterEx }
+
+var
+  MinhaException: TAppSystemCenterEx;
+
+constructor TAppSystemCenterEx.Create;
+begin
+//IMPLEMENTAR
+  FLogFile := ChangeFileExt(ParamStr(0), '.log');
+
+  Application.OnException := TrataException;
+
+end;
+
+procedure TAppSystemCenterEx.GravaLog(Value: string);
+var
+  txtLog : TextFile;
+begin
+    //IMPLEMENTAR
+
+    AssignFile(txtLog,FLogFile);
+
+    if FileExists(FLogFile) then
+      Append(txtLog)
+    else
+      Rewrite(txtLog);
+        Writeln(txtLog, FormatDateTime('dd/mm/YY hh:mm:ss -', Now) + Value);
+        CloseFile(txtLog);
+
+end;
+
+procedure TAppSystemCenterEx.TrataException(Sender: TObject; E: Exception);
+begin
+    //IMPLEMENTAR
+
+    GravaLog('-----------------------------------------------------------');
+    if TComponent(Sender) is TForm then
+      begin
+        GravaLog('Form: ' + TForm(Sender).Name);
+        GravaLog('Caption: ' + TForm(Sender).Caption);
+        GravaLog('Form: ' + E.ClassName);
+        GravaLog('Erro: ' + E.Message);
+      end
+    else
+      begin
+        GravaLog('Form: ' + TForm(TComponent(Sender).Owner).Name);
+        GravaLog('Caption: ' + TForm(TComponent(Sender).Owner).Caption);
+        GravaLog('Form: ' + E.ClassName);
+        GravaLog('Erro: ' + E.Message);
+      end;
+
+end;
+
+initialization
+  MinhaException := TAppSystemCenterEx.Create
+
+finalization
+  MinhaException.Free;
+
+end.

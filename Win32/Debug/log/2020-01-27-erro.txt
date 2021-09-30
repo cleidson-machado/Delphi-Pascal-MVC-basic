@@ -1,0 +1,22 @@
+--------------------------------------------------
+Data: 27/01/2020
+Hora: 20:55:11
+Erro: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+Classe: EIBNativeException
+Linha: 159
+Arquivo: uClienteDao.pas
+--------------------------------------------------
+Data: 27/01/2020
+Hora: 21:08:24
+Erro: [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -204
+Table unknown
+CLIENTES
+At line 1, column 13
+Classe: EIBNativeException
+Linha: 153
+Arquivo: uClienteDao.pas

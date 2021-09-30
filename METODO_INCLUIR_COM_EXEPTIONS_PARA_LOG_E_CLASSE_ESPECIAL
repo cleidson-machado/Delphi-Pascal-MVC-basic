@@ -1,0 +1,31 @@
+function TClienteDao.Incluir(AClienteModel: TClienteModel): Boolean;
+var
+  VQuery: TFDQuery;
+begin
+  VQuery := FConexao.CriarQuery();
+    try
+      try
+        VQuery.ExecSQL('insert into clienteS (nome) values (:nome)', [AClienteModel.Nome]);
+        //VQuery.ExecSQL('insert into cliente (codigo, nome) values (:codigo, :nome)', [AClienteModel.Codigo, AClienteModel.Nome]);
+      except
+        on E: Exception do
+          begin
+            Result := False;// SE OUVER ERRO.. FALSE..
+              Assert(False, '');
+                TVerificaException.SalvarLog(E);
+                     //SE ENTRAR AQUI DISPARA MSN DE ERRO DE CLASSE ESPECIALIZADA E NÃO GRAVA O LOG
+                     if not TVerificaException.TrataExcception(E) then
+                       begin//CASO CONTRÁRIO DISPARA MSN ABAIXO..
+                          raise Exception.Create('ERROR ACESS DATA BASE | CLASS:' + ' '
+                          + Self.ClassName + ' | MSN: ' + E.Message
+                          + ' ' + '|  BY INCLUIR  |' + ' ');
+                       end;
+                //ESSE EXIT TEM QUE FICAR AQUI PARA NÃO DEIXAR ESSE MÉTODO CONTINUAR
+                Exit
+          end;
+      end;
+    Result := True;// SE TUDO OCORRER BEM RESULT EM TRUE..
+  finally
+    VQuery.Free;
+  end;
+end;

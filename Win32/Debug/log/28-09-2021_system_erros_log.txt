@@ -1,0 +1,28 @@
+*******************************************************************
+DATA_HORA: 28-09-2021 | 13:06:12
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 98
+CLASS_NAME: EConvertError
+CLASS_NAME_FULL: System.SysUtils.EConvertError
+ERROR_MSN: 'A' is not a valid integer value
+*******************************************************************
+DATA_HORA: 28-09-2021 | 13:06:15
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 98
+CLASS_NAME: EConvertError
+CLASS_NAME_FULL: System.SysUtils.EConvertError
+ERROR_MSN: 'A' is not a valid integer value
+*******************************************************************
+DATA_HORA: 28-09-2021 | 13:06:57
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 98
+CLASS_NAME: EConvertError
+CLASS_NAME_FULL: System.SysUtils.EConvertError
+ERROR_MSN: 'A' is not a valid integer value
+*******************************************************************
+DATA_HORA: 28-09-2021 | 19:30:39
+ARQUIVO.PASS: FPrincipalView.pas
+ARQUIVO.PASS_LINE: 98
+CLASS_NAME: EConvertError
+CLASS_NAME_FULL: System.SysUtils.EConvertError
+ERROR_MSN: 'A' is not a valid integer value
